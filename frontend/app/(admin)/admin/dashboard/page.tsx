@@ -22,11 +22,24 @@ export default function AdminDashboardPage() {
               Sign out
             </button>
           </div>
-          <div className="bg-white rounded-2xl border border-gray-200 p-6">
+          {/* <div className="bg-white rounded-2xl border border-gray-200 p-6">
             <p className="text-gray-500 text-sm">
               Route and schedule management coming next.
             </p>
-          </div>
+          </div> */}
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <a href="/admin/routes"
+    className="bg-white rounded-2xl border border-gray-200 p-6 hover:border-blue-300 transition">
+    <p className="font-medium text-gray-900">Routes & locations</p>
+    <p className="text-sm text-gray-500 mt-1">Create and manage shuttle routes</p>
+  </a>
+  <a href="/admin/schedules"
+    className="bg-white rounded-2xl border border-gray-200 p-6 hover:border-blue-300 transition">
+    <p className="font-medium text-gray-900">Schedules</p>
+    <p className="text-sm text-gray-500 mt-1">Set departure times and seat capacity</p>
+  </a>
+</div>
         </div>
       </div>
     </ProtectedRoute>
